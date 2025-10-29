@@ -1,3 +1,14 @@
-title: "你的博客标题"
-description: "博客描述"
-theme: jekyll-theme-hacker
+title: "你的博客名称"
+author: "你的名字"
+description: "这里是你的博客描述"
+baseurl: ""
+url: "https://xihutaijixiong.github.io"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+github_username: xihutaijixiong
+
