@@ -14,8 +14,12 @@ git add .
 echo "3. 提交更改..."
 git commit -m "更新博客: $(date '+%Y-%m-%d %H:%M:%S')" || true
 
+# 先拉取远程更改（修复冲突）
+echo "4. 拉取远程更改..."
+git pull origin main --rebase
+
 # 推送到 GitHub
-echo "4. 推送到 GitHub..."
+echo "5. 推送到 GitHub..."
 git push origin main
 
 echo "✅ 部署完成！"
