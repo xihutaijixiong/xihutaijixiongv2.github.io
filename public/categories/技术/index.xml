@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技术 on 我的个人博客</title><link>https://xihutaijixiongv2.github.io/categories/%E6%8A%80%E6%9C%AF/</link><description>Recent content in 技术 on 我的个人博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Jan 2024 14:00:00 +0800</lastBuildDate><atom:link href="https://xihutaijixiongv2.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>测试自动化部署</title><link>https://xihutaijixiongv2.github.io/posts/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link><pubDate>Mon, 15 Jan 2024 14:00:00 +0800</pubDate><guid>https://xihutaijixiongv2.github.io/posts/%E6%B5%8B%E8%AF%95%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid><description>&lt;h2 id="自动化部署测试成功"&gt;自动化部署测试成功！
+&lt;/h2&gt;&lt;p&gt;这篇文章是通过完整的自动化流程发布的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;本地写作&lt;/strong&gt; → 在 Hugo 中创建 Markdown 文件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git 推送&lt;/strong&gt; → 推送到 GitHub&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动构建&lt;/strong&gt; → GitHub Actions 运行 Hugo 构建&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全球发布&lt;/strong&gt; → 部署到 GitHub Pages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;🎉 整个流程完全自动化！&lt;/p&gt;</description></item></channel></rss>
