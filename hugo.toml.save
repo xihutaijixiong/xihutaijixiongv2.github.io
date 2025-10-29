@@ -1,0 +1,39 @@
+[BDbaseURL = 'https://xihutaijixiongv2.github.io/'
+title = '我的个人博客'
+theme = 'hugo-theme-stack'
+
+languageCode = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+paginate = 10
+
+[languages.zh-cn]
+  title = "我的个人博客"
+  weight = 1
+
+[params]
+  subtitle = "从 Obsidian 自动发布的博客"
+  defaultTheme = "auto"
+  
+  [params.home]
+    showSubtitle = true
+  
+  [params.footer]
+    enable = true
+    custom = "由 Hugo 和 GitHub Pages 驱动"
+
+[menu]
+  [[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 3
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

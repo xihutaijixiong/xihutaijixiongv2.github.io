@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>我的个人博客</title><link>https://xihutaijixiongv2.github.io/</link><description>Recent content on 我的个人博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0800</lastBuildDate><atom:link href="https://xihutaijixiongv2.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>关于我</title><link>https://xihutaijixiongv2.github.io/about/</link><pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate><guid>https://xihutaijixiongv2.github.io/about/</guid><description>&lt;p&gt;这是我的个人博客，通过 Obsidian 写作，Hugo 生成，GitHub Pages 部署。&lt;/p&gt;
+&lt;p&gt;欢迎交流！&lt;/p&gt;</description></item><item><title>我的第一篇文章</title><link>https://xihutaijixiongv2.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link><pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate><guid>https://xihutaijixiongv2.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid><description>&lt;h2 id="欢迎来到我的博客"&gt;欢迎来到我的博客！
+&lt;/h2&gt;&lt;p&gt;这是我的第一篇文章，通过 Hugo 和 GitHub Pages 自动发布。&lt;/p&gt;
+&lt;h3 id="功能特色"&gt;功能特色
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;✅ 自动化部署&lt;/li&gt;
+&lt;li&gt;✅ 响应式设计&lt;/li&gt;
+&lt;li&gt;✅ 快速加载&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢访问！&lt;/p&gt;</description></item></channel></rss>
