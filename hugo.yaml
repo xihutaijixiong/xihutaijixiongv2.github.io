@@ -1,0 +1,90 @@
+baseURL: "https://xihutaijixiongv2.github.io/"
+title: "我的个人博客"
+theme: "hugo-theme-stack"
+
+languageCode: "zh-cn"
+defaultContentLanguage: "zh-cn"
+
+paginate: 5
+enableEmoji: true
+
+params:
+  # 基础信息
+  description: "从 Obsidian 自动发布的博客"
+  
+  # 首页配置
+  home:
+    showProfile: true
+    profileSubtitle: "欢迎来到我的博客"
+    
+  # 文章列表配置
+  list:
+    paginate: 5
+    
+  # 文章页面配置
+  article:
+    math: false
+    toc: true
+    codeBlock:
+      copy: true
+      
+  # 评论系统（禁用）
+  comments:
+    enabled: false
+    
+  # 侧边栏配置
+  sidebar:
+    enabled: true
+    portrait:
+      enabled: true
+      image: ""
+      imageShape: "circle"
+    widgets:
+      - "search"
+      - "pages"
+      - "tag-cloud"
+
+  # 社交链接（可选）
+  social:
+    - identifier: github
+      name: GitHub
+      url: "https://github.com/xihutaijixiong"
+      rel: "noopener noreferrer"
+
+  # 主题外观
+  appearance:
+    theme: "system"
+    displayFullname: false
+
+  # 页脚
+  footer:
+    enabled: true
+    copyright: "© 2024 我的个人博客"
+
+menu:
+  main:
+    - identifier: "home"
+      name: "首页"
+      url: "/"
+      weight: 1
+    - identifier: "archives"
+      name: "归档"
+      url: "/archives/"
+      weight: 2
+    - identifier: "search"
+      name: "搜索"
+      url: "/search/"
+      weight: 3
+    - identifier: "about"
+      name: "关于"
+      url: "/about/"
+      weight: 4
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+
+languages:
+  zh-cn:
+    languageName: "中文"
+    title: "我的个人博客"
+    weight: 1

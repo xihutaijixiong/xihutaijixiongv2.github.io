@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>随笔 on 我的个人博客</title><link>https://xihutaijixiongv2.github.io/categories/%E9%9A%8F%E7%AC%94/</link><description>Recent content in 随笔 on 我的个人博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0800</lastBuildDate><atom:link href="https://xihutaijixiongv2.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml"/><item><title>我的第一篇文章</title><link>https://xihutaijixiongv2.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link><pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate><guid>https://xihutaijixiongv2.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid><description>&lt;h2 id="欢迎来到我的博客"&gt;欢迎来到我的博客！
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>随笔 on 我的个人博客</title><link>https://xihutaijixiongv2.github.io/categories/%E9%9A%8F%E7%AC%94/</link><description>Recent content in 随笔 on 我的个人博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0800</lastBuildDate><atom:link href="https://xihutaijixiongv2.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml"/><item><title>欢迎来到我的博客</title><link>https://xihutaijixiongv2.github.io/posts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</link><pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate><guid>https://xihutaijixiongv2.github.io/posts/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</guid><description>&lt;h2 id="欢迎"&gt;欢迎！
+&lt;/h2&gt;&lt;p&gt;这是我的个人博客，通过以下技术栈构建：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;写作工具&lt;/strong&gt;: Obsidian&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;静态生成&lt;/strong&gt;: Hugo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;主题&lt;/strong&gt;: Stack&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;部署&lt;/strong&gt;: GitHub Pages + GitHub Actions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="功能特色"&gt;功能特色
+&lt;/h3&gt;&lt;p&gt;✅ 响应式设计&lt;br&gt;
+✅ 暗色/亮色模式&lt;br&gt;
+✅ 标签分类&lt;br&gt;
+✅ 搜索功能&lt;br&gt;
+✅ 自动部署&lt;/p&gt;
+&lt;p&gt;感谢访问！&lt;/p&gt;</description></item><item><title>我的第一篇文章</title><link>https://xihutaijixiongv2.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</link><pubDate>Mon, 15 Jan 2024 10:00:00 +0800</pubDate><guid>https://xihutaijixiongv2.github.io/posts/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</guid><description>&lt;h2 id="欢迎来到我的博客"&gt;欢迎来到我的博客！
 &lt;/h2&gt;&lt;p&gt;这是我的第一篇文章，通过 Hugo 和 GitHub Pages 自动发布。&lt;/p&gt;
 &lt;h3 id="功能特色"&gt;功能特色
 &lt;/h3&gt;&lt;ul&gt;
