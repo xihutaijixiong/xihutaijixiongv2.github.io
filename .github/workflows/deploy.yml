@@ -39,10 +39,11 @@ jobs:
       - name: Build Site
         run: |
           echo "=== 构建网站 ==="
-          hugo --minify --verbose
+          hugo --minify
           echo "=== 构建结果 ==="
           echo "总文件数: $(find public -type f | wc -l)"
           echo "HTML文件: $(find public -name '*.html' | wc -l) 个"
+          echo "CSS/JS文件: $(find public -name '*.css' -o -name '*.js' | wc -l) 个"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
