@@ -18,11 +18,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout with Submodules
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify Theme
+        run: |
+          echo "=== 验证主题文件 ==="
+          ls -la themes/hugo-theme-stack/
+          echo "主题布局文件: $(find themes/hugo-theme-stack/layouts -name '*.html' | wc -l) 个"
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -30,8 +36,13 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
-        run: hugo --minify
+      - name: Build Site
+        run: |
+          echo "=== 构建网站 ==="
+          hugo --minify --verbose
+          echo "=== 构建结果 ==="
+          echo "总文件数: $(find public -type f | wc -l)"
+          echo "HTML文件: $(find public -name '*.html' | wc -l) 个"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
