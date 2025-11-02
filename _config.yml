@@ -4,7 +4,7 @@ description: "这里是你的博客描述"
 baseurl: ""
 url: "https://xihutaijixiong.github.io"
 
-theme: minima
+theme: jekyll-theme-cayman
 
 plugins:
   - jekyll-feed
