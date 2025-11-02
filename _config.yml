@@ -1,0 +1,21 @@
+# 基础配置
+title: "我的个人网站"
+description: "欢迎访问我的个人网站"
+baseurl: "" # 如果仓库在子目录才需要填写
+url: "https://xihutaijixiongv3.github.io" # 替换为你的实际地址
+
+# 主题配置（使用默认主题）
+theme: minima
+
+# 作者信息
+author:
+  name: "你的名字"
+  email: "你的邮箱@example.com"
+
+# 构建设置
+markdown: kramdown
+permalink: pretty
+
+# 插件
+plugins:
+  - jekyll-feed
