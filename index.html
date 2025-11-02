@@ -3,609 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub风格博客</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>我的个人知识库</title>
     <style>
-        :root {
-            --github-bg: #0d1117;
-            --github-header: #161b22;
-            --github-border: #30363d;
-            --github-text: #c9d1d9;
-            --github-text-secondary: #8b949e;
-            --github-accent: #58a6ff;
-            --github-green: #238636;
-            --github-card: #161b22;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-        }
-        
+        /* 基础样式 */
         body {
-            background-color: var(--github-bg);
-            color: var(--github-text);
-            line-height: 1.5;
-        }
-        
-        .container {
-            max-width: 1280px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 16px;
-            display: flex;
-            flex-wrap: wrap;
+            padding: 20px;
+            color: #333;
         }
         
-        /* 头部样式 */
         header {
-            background-color: var(--github-header);
-            border-bottom: 1px solid var(--github-border);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-            font-size: 20px;
-        }
-        
-        .logo i {
-            color: var(--github-accent);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 24px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
         }
         
         nav a {
-            color: var(--github-text);
+            margin-right: 15px;
             text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
+            color: #007acc;
         }
         
-        nav a:hover {
-            color: var(--github-accent);
-        }
-        
-        .search-box {
-            display: flex;
-            align-items: center;
-            background-color: var(--github-bg);
-            border: 1px solid var(--github-border);
-            border-radius: 6px;
-            padding: 5px 12px;
-            width: 272px;
-        }
-        
-        .search-box input {
-            background: transparent;
-            border: none;
-            color: var(--github-text);
-            width: 100%;
-            outline: none;
-        }
-        
-        .search-box i {
-            color: var(--github-text-secondary);
-            margin-right: 8px;
-        }
-        
-        /* 主要内容区域 */
-        .main-content {
-            flex: 1;
-            min-width: 0;
-            padding: 32px 0;
-        }
-        
-        .sidebar {
-            width: 300px;
-            padding: 32px 0 32px 32px;
-        }
-        
-        /* 个人资料卡片 */
-        .profile-card {
-            background-color: var(--github-card);
-            border: 1px solid var(--github-border);
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-        
-        .profile-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 16px;
-        }
-        
-        .avatar {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            margin-right: 16px;
-            border: 1px solid var(--github-border);
-        }
-        
-        .profile-info h2 {
-            font-size: 20px;
-            margin-bottom: 4px;
-        }
-        
-        .profile-info p {
-            color: var(--github-text-secondary);
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-        
-        .follow-btn {
-            background-color: var(--github-green);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 5px 16px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            width: 100%;
-            margin-bottom: 16px;
-        }
-        
-        .profile-stats {
-            display: flex;
-            gap: 16px;
-            font-size: 14px;
-            color: var(--github-text-secondary);
-        }
-        
-        .profile-stats span {
-            color: var(--github-text);
-            font-weight: 600;
-        }
-        
-        /* 贡献日历 */
-        .contribution-graph {
-            background-color: var(--github-card);
-            border: 1px solid var(--github-border);
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-        
-        .contribution-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 16px;
-        }
-        
-        .contribution-grid {
+        .categories {
             display: grid;
-            grid-template-columns: repeat(52, 1fr);
-            gap: 3px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
         }
         
-        .contribution-cell {
-            width: 12px;
-            height: 12px;
-            border-radius: 2px;
-            background-color: #161b22;
+        .category {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: #fafafa;
         }
         
-        .contribution-cell.low {
-            background-color: #0e4429;
-        }
-        
-        .contribution-cell.medium {
-            background-color: #006d32;
-        }
-        
-        .contribution-cell.high {
-            background-color: #26a641;
-        }
-        
-        .contribution-cell.very-high {
-            background-color: #39d353;
-        }
-        
-        /* 博客文章 */
-        .blog-post {
-            background-color: var(--github-card);
-            border: 1px solid var(--github-border);
-            border-radius: 6px;
-            padding: 24px;
-            margin-bottom: 16px;
-        }
-        
-        .post-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 16px;
-        }
-        
-        .post-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--github-accent);
-            text-decoration: none;
-        }
-        
-        .post-title:hover {
-            text-decoration: underline;
-        }
-        
-        .post-meta {
-            color: var(--github-text-secondary);
-            font-size: 14px;
-        }
-        
-        .post-content {
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-        
-        .post-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
-        }
-        
-        .tag {
-            background-color: rgba(56, 139, 253, 0.1);
-            color: var(--github-accent);
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-        }
-        
-        .post-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid var(--github-border);
-            padding-top: 16px;
-            font-size: 14px;
-            color: var(--github-text-secondary);
-        }
-        
-        .post-actions {
-            display: flex;
-            gap: 16px;
-        }
-        
-        .post-action {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            cursor: pointer;
-        }
-        
-        /* 侧边栏组件 */
-        .sidebar-section {
-            background-color: var(--github-card);
-            border: 1px solid var(--github-border);
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-        
-        .sidebar-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--github-border);
-        }
-        
-        .category-list, .tag-list {
+        .article-list {
             list-style: none;
+            padding: 0;
         }
         
-        .category-item, .tag-item {
-            margin-bottom: 8px;
+        .article-list li {
+            margin: 0.5rem 0;
         }
         
-        .category-item a, .tag-item a {
-            color: var(--github-text);
+        .article-list a {
             text-decoration: none;
-            display: flex;
-            justify-content: space-between;
+            color: #555;
+            display: block;
+            padding: 0.3rem 0;
         }
         
-        .category-item a:hover, .tag-item a:hover {
-            color: var(--github-accent);
+        .article-list a:hover {
+            color: #007acc;
         }
         
-        .category-count, .tag-count {
-            background-color: rgba(110, 118, 129, 0.4);
-            border-radius: 12px;
-            padding: 2px 6px;
-            font-size: 12px;
-        }
-        
-        /* 页脚 */
         footer {
-            border-top: 1px solid var(--github-border);
-            padding: 40px 0;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
             text-align: center;
-            color: var(--github-text-secondary);
-            font-size: 14px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        
-        .footer-links a {
-            color: var(--github-text-secondary);
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            color: var(--github-accent);
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .sidebar {
-                width: 100%;
-                padding-left: 0;
-            }
-            
-            .header-content {
-                flex-wrap: wrap;
-                gap: 16px;
-            }
-            
-            .search-box {
-                order: 3;
-                width: 100%;
-            }
-            
-            nav ul {
-                gap: 16px;
-            }
+            color: #666;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fab fa-github"></i>
-                    <span>DevBlog</span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#">文章</a></li>
-                        <li><a href="#">项目</a></li>
-                        <li><a href="#">关于</a></li>
-                    </ul>
-                </nav>
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="搜索博客...">
-                </div>
-            </div>
-        </div>
+        <h1>西湖太极熊的知识库</h1>
+        <nav>
+            <a href="#data-analysis">数据分析</a>
+            <a href="#knowledge-management">知识管理</a>
+            <a href="#english-learning">英语学习</a>
+            <a href="#travel">旅游记录</a>
+        </nav>
     </header>
-    
-    <div class="container">
-        <main class="main-content">
-            <div class="blog-post">
-                <div class="post-header">
-                    <a href="#" class="post-title">使用React和Node.js构建全栈博客应用</a>
-                    <div class="post-meta">2023年10月15日 · 12分钟阅读</div>
-                </div>
-                <div class="post-content">
-                    <p>在本教程中，我们将使用React作为前端框架，Node.js和Express作为后端，MongoDB作为数据库，构建一个功能完整的全栈博客应用。我们将实现用户认证、文章发布、评论系统等核心功能。</p>
-                    <p>首先，我们需要设置开发环境，安装必要的依赖包。然后分别创建前端和后端项目结构，并建立两者之间的通信。</p>
-                </div>
-                <div class="post-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">MongoDB</span>
-                    <span class="tag">全栈开发</span>
-                </div>
-                <div class="post-footer">
-                    <div class="post-actions">
-                        <div class="post-action">
-                            <i class="far fa-heart"></i>
-                            <span>42</span>
-                        </div>
-                        <div class="post-action">
-                            <i class="far fa-comment"></i>
-                            <span>8</span>
-                        </div>
-                    </div>
-                    <div class="read-more">
-                        <a href="#">阅读全文 →</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="blog-post">
-                <div class="post-header">
-                    <a href="#" class="post-title">深入理解JavaScript闭包和作用域链</a>
-                    <div class="post-meta">2023年10月10日 · 8分钟阅读</div>
-                </div>
-                <div class="post-content">
-                    <p>闭包是JavaScript中一个强大且常被误解的概念。理解闭包对于编写高效、可维护的JavaScript代码至关重要。本文将深入探讨闭包的工作原理、使用场景以及常见陷阱。</p>
-                    <p>我们将通过多个实际示例来演示闭包如何工作，以及它们如何帮助我们在JavaScript中实现数据封装和私有变量。</p>
-                </div>
-                <div class="post-tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">闭包</span>
-                    <span class="tag">作用域</span>
-                </div>
-                <div class="post-footer">
-                    <div class="post-actions">
-                        <div class="post-action">
-                            <i class="far fa-heart"></i>
-                            <span>36</span>
-                        </div>
-                        <div class="post-action">
-                            <i class="far fa-comment"></i>
-                            <span>15</span>
-                        </div>
-                    </div>
-                    <div class="read-more">
-                        <a href="#">阅读全文 →</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="blog-post">
-                <div class="post-header">
-                    <a href="#" class="post-title">Git高级技巧：提高开发效率的10个命令</a>
-                    <div class="post-meta">2023年10月5日 · 10分钟阅读</div>
-                </div>
-                <div class="post-content">
-                    <p>除了基本的add、commit和push之外，Git还有许多强大的功能可以显著提高开发效率。本文将介绍10个高级Git命令和技巧，帮助您更好地管理代码版本。</p>
-                    <p>我们将探讨诸如交互式rebase、stash、cherry-pick等高级功能，并展示如何在日常开发工作中有效利用它们。</p>
-                </div>
-                <div class="post-tags">
-                    <span class="tag">Git</span>
-                    <span class="tag">版本控制</span>
-                    <span class="tag">开发工具</span>
-                </div>
-                <div class="post-footer">
-                    <div class="post-actions">
-                        <div class="post-action">
-                            <i class="far fa-heart"></i>
-                            <span>28</span>
-                        </div>
-                        <div class="post-action">
-                            <i class="far fa-comment"></i>
-                            <span>6</span>
-                        </div>
-                    </div>
-                    <div class="read-more">
-                        <a href="#">阅读全文 →</a>
-                    </div>
-                </div>
-            </div>
-        </main>
-        
-        <aside class="sidebar">
-            <div class="profile-card">
-                <div class="profile-header">
-                    <img src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Avatar" class="avatar">
-                    <div class="profile-info">
-                        <h2>octocat</h2>
-                        <p>全栈开发者 & 技术博主</p>
-                    </div>
-                </div>
-                <button class="follow-btn">关注</button>
-                <div class="profile-stats">
-                    <div>
-                        <i class="far fa-file-alt"></i>
-                        <span>24</span> 文章
-                    </div>
-                    <div>
-                        <i class="far fa-eye"></i>
-                        <span>3.2k</span> 阅读
-                    </div>
-                </div>
-            </div>
-            
-            <div class="contribution-graph">
-                <div class="contribution-header">
-                    <h3>2023年贡献</h3>
-                    <span>总计 1,204 次贡献</span>
-                </div>
-                <div class="contribution-grid">
-                    <!-- 这里简化了贡献日历，实际应用中应该使用真实数据 -->
-                    <div class="contribution-cell"></div>
-                    <div class="contribution-cell low"></div>
-                    <div class="contribution-cell medium"></div>
-                    <div class="contribution-cell high"></div>
-                    <div class="contribution-cell very-high"></div>
-                    <!-- 更多格子... -->
-                </div>
-            </div>
-            
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">分类</h3>
-                <ul class="category-list">
-                    <li class="category-item">
-                        <a href="#">
-                            <span>前端开发</span>
-                            <span class="category-count">12</span>
-                        </a>
-                    </li>
-                    <li class="category-item">
-                        <a href="#">
-                            <span>后端开发</span>
-                            <span class="category-count">8</span>
-                        </a>
-                    </li>
-                    <li class="category-item">
-                        <a href="#">
-                            <span>DevOps</span>
-                            <span class="category-count">5</span>
-                        </a>
-                    </li>
-                    <li class="category-item">
-                        <a href="#">
-                            <span>算法与数据结构</span>
-                            <span class="category-count">7</span>
-                        </a>
-                    </li>
+
+    <main>
+        <section class="categories">
+            <div class="category" id="data-analysis">
+                <h2>📊 数据分析</h2>
+                <ul class="article-list">
+                    <li><a href="articles/python-basics.md">Python数据分析入门</a></li>
+                    <li><a href="articles/excel-tips.md">Excel高级技巧</a></li>
+                    <li><a href="articles/data-visualization.md">数据可视化指南</a></li>
                 </ul>
             </div>
             
-            <div class="sidebar-section">
-                <h3 class="sidebar-title">热门标签</h3>
-                <div class="post-tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">React</span>
-                    <span class="tag">Node.js</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Git</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">TypeScript</span>
-                </div>
+            <div class="category" id="knowledge-management">
+                <h2>🗂️ 知识管理</h2>
+                <ul class="article-list">
+                    <li><a href="articles/note-taking-methods.md">高效笔记方法</a></li>
+                    <li><a href="articles/digital-tools.md">数字工具推荐</a></li>
+                </ul>
             </div>
-        </aside>
-    </div>
-    
+            
+            <div class="category" id="english-learning">
+                <h2>🇺🇸 英语学习</h2>
+                <ul class="article-list">
+                    <li><a href="articles/vocabulary-building.md">词汇积累技巧</a></li>
+                    <li><a href="articles/listening-practice.md">听力训练方法</a></li>
+                </ul>
+            </div>
+            
+            <div class="category" id="travel">
+                <h2>✈️ 旅游记录</h2>
+                <ul class="article-list">
+                    <li><a href="articles/japan-trip.md">日本关西之旅</a></li>
+                    <li><a href="articles/travel-gear.md">旅行装备清单</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">关于</a>
-                <a href="#">帮助</a>
-                <a href="#">状态</a>
-                <a href="#">API</a>
-                <a href="#">隐私</a>
-                <a href="#">条款</a>
-            </div>
-            <p>© 2023 DevBlog. 保留所有权利。</p>
-        </div>
+        <p>© 2025开启 西湖太极熊的个人知识库 | 正在建设中...</p>
     </footer>
 </body>
 </html>
