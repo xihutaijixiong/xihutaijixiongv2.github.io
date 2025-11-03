@@ -1,20 +1,20 @@
 # 基础配置
-title: "我的个人网站"
-description: "欢迎访问我的个人网站"
+title: "西湖太极熊的个人网站"
+description: "欢迎访问西湖太极熊的个人网站"
 baseurl: "" # 如果仓库在子目录才需要填写
-url: "https://xihutaijixiongv3.github.io" # 替换为你的实际地址
+url: "https://xihutaijixiong.github.io" # 替换为你的实际地址
 
 # 主题配置（使用默认主题）
 theme: minima
 
 # 作者信息
 author:
-  name: "你的名字"
+  name: "西湖太极熊"
   email: "你的邮箱@example.com"
 
 # 构建设置
 markdown: kramdown
-permalink: pretty
+permalink: /:year/:month/:day/:title.html
 
 # 插件
 plugins:
