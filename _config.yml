@@ -2,7 +2,7 @@
 title: "西湖太极熊的个人网站"
 description: "欢迎访问西湖太极熊的个人网站"
 baseurl: "" # 如果仓库在子目录才需要填写
-url: "https://xihutaijixiong.github.io" # 替换为你的实际地址
+url: "https://xihutaijixiongv2.github.io" # 替换为你的实际地址
 
 # 主题配置（使用默认主题）
 theme: minima
